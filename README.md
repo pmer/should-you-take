@@ -80,3 +80,7 @@ before using.
 ## Development
 
 Feel free to fork and/or send pull requests!
+
+## License
+
+MIT
