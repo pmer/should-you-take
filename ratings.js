@@ -12,6 +12,7 @@ let fs = require('fs');
 let moment = require('moment');
 let request = require('request-promise');
 let sequelize = require('sequelize');
+let distributions = require('probability-distributions');
 
 let db = new sequelize(process.env.DB);
 
@@ -28,6 +29,10 @@ let ratingsTable = db.define('rating', {
 });
 
 let dbReadyPromise = db.sync();
+
+let normal = (mean, sd) => {
+  return distributions.rnorm(1, mean, sd)[0];
+};
 
 let wait = millis => {
   return new Promise(resolve => {
@@ -46,7 +51,9 @@ let requestRatingsPage = (tid, page) => {
     headers: HEADERS,
     json: true
   };
-  return wait(WAIT)
+  let duration = Math.max(0, normal(WAIT, WAIT/3));
+  console.log(`Waiting ${duration/1000.0} seconds`);
+  return wait(duration)
   .then(() => request(options));
 };
 
