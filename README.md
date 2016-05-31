@@ -67,7 +67,7 @@ found in your `departments/` directory.
 
 Query your database to your liking!
 
-You're set until next term.
+You're set until next term. 🍰
 
 ## Legal
 
