@@ -103,7 +103,7 @@ let downloadTeachers = teachers => {
 };
 
 let downloadTeachersInDepartment = departmentJsonPaths => {
-  if (!departmentJsonPaths) {
+  if (!departmentJsonPaths.length) {
     return Promise.resolve();
   }
   let departmentJsonPath = departmentJsonPaths[0];
