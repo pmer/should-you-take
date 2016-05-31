@@ -78,7 +78,7 @@ let makeRating = (teacherId, teacherName, rmpRating) => {
     class: rmpRating.rClass,
     date: moment(rmpRating.rDate, 'MM/DD/YYYY').toDate(),
     overall: rmpRating.rOverall,
-    difficulty: 5.0 - rmpRating.rEasy,
+    difficulty: 6.0 - rmpRating.rEasy,  // value from 1-5
     comments: rmpRating.rComments,
     originalJson: JSON.stringify(rmpRating)
   });
