@@ -1,0 +1,20 @@
+{
+  "name": "should-you-take",
+  "author": {
+    "email": "pdm@pdm.me",
+    "name": "Paul Merrill"
+  },
+  "description": "Should you take that college course now or later?",
+  "homepage": "https://github.com/pmer/should-you-take",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pmer/should-you-take.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "moment": "^2.13.0",
+    "request-promise": "^3.0.0",
+    "sequelize": "^3.23.3"
+  }
+}
