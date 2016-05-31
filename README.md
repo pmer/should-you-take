@@ -71,7 +71,9 @@ You're set until next term. 🍰
 
 ## Legal
 
-You should read
+Do not publish your downloaded tables.
+
+Please read
 [RateMyProfessors.com Terms of Service § 4](http://www.ratemyprofessors.com/TermsOfUse_us.jsp#section4)
 before using.
 
