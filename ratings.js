@@ -123,6 +123,6 @@ let downloadTeachersInDepartment = departmentJsonPaths => {
 
 let departmentPaths = fs.readdirSync('departments')
                         .map(file => `departments/${file}`);
-let departmentJsonPaths = departmentPaths.filter(arg => arg.endsWith('.json'));
+let departmentJsonPaths = departmentPaths.filter(path => path.endsWith('.json'));
 
 downloadTeachersInDepartment(departmentJsonPaths);
