@@ -3,8 +3,8 @@
 ## About
 
 Course listings at colleges and universities show you who is currently teaching
-a class for the current term, but can be difficult to see who taught the course
-in the recent past. Additionally, looking up all the professors on
+a class for the current term, but it can be difficult to see who taught the
+course in the recent past. Additionally, looking up all the professors on
 [www.ratemyprofessors.com](www.ratemyprofessors.com) can sometimes aid in
 decisions, but is time consuming.  This program aims to make both tasks easier.
 
