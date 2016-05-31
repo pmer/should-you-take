@@ -69,6 +69,46 @@ Query your database to your liking!
 
 You're set until next term. 🍰
 
+#### Useful queries
+
+Figure out what string identifies your class on RateMyProfessors.com.
+
+```sql
+select distinct class
+from ratings
+where class like '%108%';
+```
+
+List the professors who have taught your course and have received comments
+about it in the past five years. (Postgres syntax.)
+
+```sql
+select distinct "teacherName"
+from ratings
+where date > now() - interval '5 year' and
+      class = 'MATH108';
+```
+
+List all comments (from all classes, to get a better picture of the professor)
+for professors who either taught the course recently or are currently teaching
+it now. (Postgres syntax.)
+
+```sql
+select "teacherName", class, comments
+from ratings
+where "teacherId" in (
+	(select "teacherId"
+	 from ratings
+	 where date > now() - interval '5 year' and
+	       class = 'CS157A')
+	union
+	(select "teacherId"
+	 from ratings
+	 where "teacherName" like 'Mac%' or
+	       "teacherName" like 'Patra%')
+);
+```
+
 ## Legal
 
 Do not publish your downloaded tables.
